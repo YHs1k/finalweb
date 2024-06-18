@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <title>성격</title>
+  </head>
+  <body>
+    <header>
+      <h1>성격</h1>
+      <ul>
+        <li class="current"><a href="index.html">홈으로</a></li>
+        <li><a href="about.html">취미</a></li>
+        <li><a href="ppt.html">성격</a></li>
+        <li><a href="blog.html">블로그</a></li>
+        <li><a href="contact.html">연락처</a></li>
+        <li><a href="https://web-demo2-qvh9-faeb30csx-yunhyeonsiks-projects.vercel.app/">HCJ</a></li>
+        <li><a href="https://team-indol-zeta.vercel.app/">Team</a></li>
+      </ul>
+    </header>
+    <section id="main">
+      <h2>My</h2>
+      <h3>Portpolio</h3>
+      <div class="a_button"><a href="#profile_pic">살펴보기</a></div>
+    </section>
+    <section>
+      <article id="profile_pic">
+        <button id="showImageButton">궁금해?</button>
+        <img id="image1" src="./assets/img/mbti.jpg" alt="MBTI Image"/>
+        <img id="image2" src="./assets/img/haha.jpg" alt="Haha Image"/>
+        <script>
+          document.getElementById('showImageButton').addEventListener('click', function() {
+              document.getElementById('image1').style.display = 'block';
+              document.getElementById('image2').style.display = 'block';
+          });
+      </script>
+    <style>
+      img {
+          width: auto !important;
+          height: auto;
+          object-fit: cover;
+          display: none; /* 초기에는 이미지를 숨깁니다 */
+      }
+      button {
+          width: 150px; /* 버튼의 너비 설정 */
+          height: 50px; /* 버튼의 높이 설정 */
+          font-size: 18px; /* 버튼의 글씨 크기 설정 */
+          padding: 10px; /* 버튼 내부 여백 설정 */
+          cursor: pointer; /* 마우스를 올렸을 때 포인터 모양 변경 */
+      }
+  </style>
+      </article>
+      <article id="profile_desc">
+      <div class="button_area">
+        <button><a href="about.html">취미</a></button>
+        <button><a href="ppt.html">성격</a></button>
+        <button><a href="blog.html">블로그</a></button>
+        <button><a href="contact.html">연락처</a></button>
+        </div>
+        <footer>
+          <b
+            ><a href="#main"
+              >2024 My Portfolio. 92113748 윤현식.</a
+            >
+          </b>
+        </footer>
+      </article>
+    </section>
+  </body>
+</html>

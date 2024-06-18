@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <title>portfolio</title>
+  </head>
+  <body>
+    <header>
+      <h1>개인 홈페이지</h1>
+      <nav>
+        <ul>
+          <li class="current"><a href="index.html">홈으로</a></li>
+          <li><a href="about.html">취미</a></li>
+          <li><a href="ppt.html">성격</a></li>
+          <li><a href="blog.html">블로그</a></li>
+          <li><a href="contact.html">연락처</a></li>
+          <li><a href="js.html">JAVASC</a></li>
+          <li><a href="https://web-demo2-qvh9-faeb30csx-yunhyeonsiks-projects.vercel.app/">HCJ</a></li>
+          <li><a href="https://team-indol-zeta.vercel.app/">Team</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="main">
+      <h2>My</h2>
+      <h3>Portpolio</h3>
+      <div class="a_button"><a href="#profile_pic">살펴보기</a></div>
+    </section>
+    <section>
+      <article id="profile_pic">
+        <h2>이제 그만 쉬고싶조</h2>
+        <h3>팀원</h3>
+<div class="gallery">
+        <div class="gallery-item">
+            <a href="https://jbu-personal-homepage.vercel.app/">
+                <img src="/assets/img/kmk.jpg" alt="KMK" />
+            </a>
+            <h3>김민기 : 92113528</h3>
+        </div>
+        <div class="gallery-item">
+            <a href="https://team-livid.vercel.app/">
+                <img src="/assets/img/ksw.png" alt="KSW" />
+            </a>
+            <h3>권승원 : 92113463</h3>
+        </div>
+        <div class="gallery-item">
+            <a href="https://midweb.vercel.app/index.html">
+                <img src="/assets/img/YHS.jpg" alt="YHS" />
+            </a>
+            <h3>윤현식 : 92113748</h3>
+        </div>
+        <div class="gallery-item">
+            <a href="https://webhomework.vercel.app/">
+                <img src="/assets/img/YJ.jpg" alt="YJ" />
+            </a>
+            <h3>홍영재 : 92113932</h3>
+        </div>
+    </div>
+      </article>
+      <article id="profile_desc">
+        <div id="loginContainer">
+          <!-- 큰 상자 -->
+          <h2>Login</h2>
+          <div id="loginForm">
+            <!-- 작은 상자 -->
+            <form onsubmit="return validateForm()">
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Username"
+                required
+              /><br />
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+              /><br />
+              <input type="submit" value="Login" />
+            </form>
+          </div>
+        </div>
+        <script>
+          function validateForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // 간단한 사용자명과 비밀번호 검증
+            if (username === 'user' && password === 'password') {
+              alert('환영합니다');
+              return true;
+            } else {
+              alert('아이디와 비밀번호를 다시 확인해 주세요');
+              return false;
+            }
+          }
+        </script>
+        <div class="button_area">
+          <button><a href="about.html">취미</a></button>
+          <button><a href="ppt.html">성격</a></button>
+          <button><a href="blog.html">블로그</a></button>
+          <button><a href="contact.html">연락처</a></button>
+        </div>
+        <footer>
+          <b>
+            <a href="#main">2024 My Portfolio. 92113748 윤현식.</a>
+          </b>
+        </footer>
+      </article>
+    </section>
+  </body>
+</html>

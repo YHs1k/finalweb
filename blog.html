@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet"/>
+    <title>Blog</title>
+    <style>
+        body {
+            font-family: 'Jua', sans-serif;
+            margin: 0;
+            padding: 0 ;
+            background: url('./assets/img/sp_bg.jpg') auto !important;
+            background-size: cover;
+        }
+        .post-form, .post, .comment-form {
+            margin-bottom: 20px;
+        }
+        .post-form textarea, .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+        .post, .comment {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .post {
+            margin-top: 20px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 5px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+  </head>
+<body>
+    <header>
+        <h1>개인 블로그</h1>
+        <ul>
+            <li class="current"><a href="index.html">홈으로</a></li>
+            <li><a href="about.html">취미</a></li>
+            <li><a href="ppt.html">성격</a></li>
+            <li><a href="blog.html">블로그</a></li>
+            <li><a href="contact.html">연락처</a></li>
+            <li><a href="https://web-demo2-qvh9-faeb30csx-yunhyeonsiks-projects.vercel.app/">HCJ</a></li>
+            <li><a href="https://team-indol-zeta.vercel.app/">Team</a></li>
+        </ul>
+    </header>
+    <section id="main">
+        <div class="a_button"><a href="#posts">살펴보기</a></div>
+    </section>
+    <div id="main" class="container">
+        <div class="post-form">
+            <h2>New Post</h2>
+            <textarea id="postContent" rows="4" cols="50" placeholder="Write your post here..."></textarea><br>
+            <button onclick="addPost()">Post</button>
+        </div>
+        <div id="posts"></div>
+    </div>
+    <footer>
+        <b><a href="#main">2024 My Portfolio. 92113748 윤현식.</a></b>
+    </footer>
+    <script>
+        function addPost() {
+            const postContent = document.getElementById('postContent').value;
+            if (postContent.trim()) {
+                const postDiv = document.createElement('div');
+                postDiv.className = 'post';
+                postDiv.innerHTML = `
+                    <p>${postContent}</p>
+                    <div class="comment-form">
+                        <textarea rows="2" cols="40" placeholder="Write a comment..."></textarea><br>
+                        <button onclick="addComment(this)">Comment</button>
+                    </div>
+                    <div class="comments"></div>
+                `;
+                document.getElementById('posts').appendChild(postDiv);
+                document.getElementById('postContent').value = '';
+            }
+        }
+
+        function addComment(button) {
+            const commentContent = button.previousElementSibling.value;
+            if (commentContent.trim()) {
+                const commentDiv = document.createElement('div');
+                commentDiv.className = 'comment';
+                commentDiv.innerHTML = `<p>${commentContent}</p>`;
+                button.parentElement.nextElementSibling.appendChild(commentDiv);
+                button.previousElementSibling.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
